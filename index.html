@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div class="main-block">
+            <div class="intro-block" id="intro-block">
+                <h1 id="heading">Hello Coders</h1>
+                <p id="para">Join the free coding challenge & earn upto 1lakh Rupees!</p>
+                <button onclick="toggle()">Login Now</button>
+            </div>
+            <div class="login-block" id="login-block">
+                <div class="form">
+                    <form action="/">
+                        <div class="username">
+                            <!-- <label for="username">Username: </label> -->
+                            <input type="text" name="username" id="username" placeholder="username" >
+                        </div>
+                        <div class="password">
+                            <!-- <label for="password">Password: </label> -->
+                            <input type="password" name="password" id="password" placeholder="password" >
+                        </div>
+                        <div class="submit">
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var togglevar=true;
+        const toggle= ()=>{
+            // console.log(window.innerWidth)
+            // console.log("hello")
+         if (window.innerWidth >="600") {
+            if(togglevar){
+                document.getElementById('intro-block').style.width='20%';
+                document.getElementById('login-block').style.width='80%';
+                // console.log("hellmmo")
+                document.getElementById("heading").style.opacity=0;
+                document.getElementById("para").style.opacity=0;
+                togglevar=false;
+                
+            }
+            else{
+               togglevar=true;
+                document.getElementById('login-block').style.width='0%';
+                document.getElementById('intro-block').style.width='100%';
+                // console.log("hellmmo")
+
+                document.getElementById("heading").style.opacity=1;
+                document.getElementById("para").style.opacity=1;
+
+        }
+         }
+
+         if (window.innerWidth < "600") {
+            if(togglevar){
+                document.getElementById('intro-block').style.height='20%';
+                document.getElementById('login-block').style.height='80%';
+                // console.log("hellmmo")
+                document.getElementById("heading").style.opacity=0;
+                document.getElementById("para").style.opacity=0;
+                togglevar=false;
+                
+            }
+            else{
+               togglevar=true;
+                document.getElementById('login-block').style.height='0%';
+                document.getElementById('intro-block').style.height='100%';
+                // console.log("hellmmo")
+
+                document.getElementById("heading").style.opacity=1;
+                document.getElementById("para").style.opacity=1;
+
+        }
+         }
+
+        }
+         </script>
+
+    
+</body>
+</html>
